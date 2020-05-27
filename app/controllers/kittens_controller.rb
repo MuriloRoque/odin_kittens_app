@@ -1,10 +1,18 @@
 class KittensController < ApplicationController
   def index
     @kittens = Kitten.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @kittens }
+    end
   end
 
   def show
     @kitten = Kitten.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render json: @kitten }
+    end
   end
 
   def new
@@ -15,7 +23,7 @@ class KittensController < ApplicationController
     @kitten = Kitten.new(kitten_params)
 
     if @kitten.save
-      flash[:notice] = "You are making the world better!"
+      flash[:notice] = 'You are making the world better!'
       redirect_to kittens_path
     else
       flash[:notice] = "You gotta be kidding me, can't you see you made a mistake?"
@@ -31,7 +39,7 @@ class KittensController < ApplicationController
     @kitten = Kitten.find(params[:id])
 
     if @kitten.update(kitten_params)
-      flash[:notice] = "You edited your kitten succesfully!"
+      flash[:notice] = 'You edited your kitten succesfully!'
       redirect_to @kitten
     else
       flash[:notice] = "You gotta be kidding me, can't you see you made a mistake?"
@@ -42,16 +50,14 @@ class KittensController < ApplicationController
   def destroy
     @kitten = Kitten.find(params[:id])
     @kitten.destroy
-    flash[:notice] = "How could you do this? You monster!"
+    flash[:notice] = 'How could you do this? You monster!'
     redirect_to kittens_path
   end
 
   def apocalypse
     @kittens = Kitten.all
-    @kittens.each do |kitten|
-      kitten.destroy
-    end
-    flash[:notice] = "You are going to hell!"
+    @kittens.each(&:destroy)
+    flash[:notice] = 'You are going to hell!'
     redirect_to kittens_path
   end
 
