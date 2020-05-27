@@ -39,3 +39,39 @@ nav{
   font-size: large;
   font-weight: bolder;
 }
+
+.one-kitten{
+  border: 1px solid #000;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.flex{
+  display: flex;
+  justify-content: flex-start
+}
+
+form{
+  text-align: center;
+}
+
+form label{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+form input{
+  margin-top: 10px;
+}
+
+.submit{
+  padding: 5px;
+  font-size: 15px;
+  background-color: rgb(13, 47, 236);
+  color: #fff;
+  cursor: grab;
+}
+
+.submit:hover{
+  transform: scale(1.05);
+}

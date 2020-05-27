@@ -1,0 +1,28 @@
+<%= form_for :kitten, url: kittens_path do |f| %>
+  <% if flash[:notice]  %>
+    <p class = "notice"><%= flash[:notice] %></p>
+  <% end %>
+  <p>
+    <%= f.label :name, 'Name:' %><br>
+    <%= f.text_field(:name) %>
+  </p>
+
+  <p>
+    <%= f.label :age, 'Age:' %><br>
+    <%= f.text_field(:age) %>
+  </p>
+
+  <p>
+    <%= f.label :cuteness, 'Cuteness:' %><br>
+    <%= f.text_field(:cuteness) %>
+  </p>
+
+  <p>
+    <%= f.label :softness, 'Softness:' %><br>
+    <%= f.text_field(:softness) %>
+  </p>
+
+  <p>
+    <%= f.submit(class: 'submit') %>
+  </p>
+<% end %>
