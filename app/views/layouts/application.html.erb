@@ -9,6 +9,14 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header>
+    <h1>Cute little kittens app</h1>
+    <nav>
+      <%= link_to 'Add a new kitten', new_kitten_path %>
+      <%= link_to 'Show all kittens', kittens_path %>
+    </nav>
+  </header>
+
   <body>
     <%= yield %>
   </body>

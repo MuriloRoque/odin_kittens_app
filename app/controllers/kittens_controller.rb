@@ -15,8 +15,9 @@ class KittensController < ApplicationController
     @kitten = Kitten.new(kitten_params)
 
     if @kitten.save
-      redirect_to @kitten
+      redirect_to kittens_path
     else
+      flash[:notice] = "You gotta be kidding me, can't you see you made a mistake?"
       render 'new'
     end
   end
