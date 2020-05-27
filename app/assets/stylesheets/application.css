@@ -1,0 +1,107 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body{
+  background-color: #beb3b3
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1{
+  width: 50%;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+nav a{
+  text-decoration: none;
+  color: rgb(32, 134, 41);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.notice{
+  color: rgb(255, 251, 0);
+  font-size: 20px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.one-kitten{
+  border: 1px solid #000;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.flex{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+
+form{
+  text-align: center;
+}
+
+form label{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+form input{
+  margin-top: 10px;
+}
+
+.submit{
+  padding: 5px;
+  font-size: 15px;
+  background-color: rgb(13, 47, 236);
+  color: #fff;
+  cursor: grab;
+}
+
+.submit:hover{
+  transform: scale(1.05);
+}
+
+.apocalypse{
+  font-size: 30px;
+  color: red;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.edit-profile{
+  text-decoration: none;
+  color: rgb(32, 134, 41);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.hell{
+  background-color: rgb(192, 89, 5);
+  /* background-image: url(images/hell.jpeg);
+  /* background-image: image(images/hell.jpeg); */
+  /* background: url(../images/hell.jpeg), no-repeat; */
+}
