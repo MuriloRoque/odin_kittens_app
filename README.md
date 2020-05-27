@@ -29,7 +29,7 @@ Ruby on Rails, HTML, CSS and Javascript.
 
 ## Live Demo
 
-Not avaiable at the moment, it will be in here a future feature.
+[Click for Live App](https://obscure-inlet-19384.herokuapp.com/)
 
 ## Getting Started
 
