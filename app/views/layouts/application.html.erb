@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OdinKittensApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <header>
+    <h1>Cute little kittens app</h1>
+    <nav>
+      <%= link_to 'Add a new kitten', new_kitten_path %>
+      <%= link_to 'Show all kittens', kittens_path %>
+    </nav>
+  </header>
+    <%= yield %>
+  </body>
+</html>

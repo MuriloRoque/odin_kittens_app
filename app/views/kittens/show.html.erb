@@ -1,0 +1,14 @@
+<body>
+  <div class = "flex">
+    <div class = "one-kitten">
+      <% if flash[:notice]  %>
+        <p class = "notice"><%= flash[:notice] %></p>
+      <% end %>
+      <p><strong>Name: </strong><%= @kitten.name %></p>
+      <p><strong>Age: </strong><%= @kitten.age %></p>
+      <p><strong>Cuteness: </strong><%= @kitten.cuteness %></p>
+      <p><strong>Softness: </strong><%= @kitten.softness %></p>
+      <%= link_to "Edit your little friend", edit_kitten_path(@kitten), :class => 'edit-profile' %>
+      <%= link_to "Kill the poor kitten", kitten_path(@kitten), method: :delete, data: {confirm: 'Are you really that bad?'}, :class => 'notice' %>
+    </div>
+  </div>
