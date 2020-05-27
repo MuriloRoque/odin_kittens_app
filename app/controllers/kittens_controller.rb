@@ -15,6 +15,7 @@ class KittensController < ApplicationController
     @kitten = Kitten.new(kitten_params)
 
     if @kitten.save
+      flash[:notice] = "You are making the world better!"
       redirect_to kittens_path
     else
       flash[:notice] = "You gotta be kidding me, can't you see you made a mistake?"
@@ -30,8 +31,10 @@ class KittensController < ApplicationController
     @kitten = Kitten.find(params[:id])
 
     if @kitten.update(kitten_params)
+      flash[:notice] = "You edited your kitten succesfully!"
       redirect_to @kitten
     else
+      flash[:notice] = "You gotta be kidding me, can't you see you made a mistake?"
       render 'edit'
     end
   end
@@ -39,6 +42,16 @@ class KittensController < ApplicationController
   def destroy
     @kitten = Kitten.find(params[:id])
     @kitten.destroy
+    flash[:notice] = "How could you do this? You monster!"
+    redirect_to kittens_path
+  end
+
+  def apocalypse
+    @kittens = Kitten.all
+    @kittens.each do |kitten|
+      kitten.destroy
+    end
+    flash[:notice] = "You are going to hell!"
     redirect_to kittens_path
   end
 

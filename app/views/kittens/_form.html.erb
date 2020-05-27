@@ -1,4 +1,4 @@
-<%= form_for :kitten, url: kittens_path do |f| %>
+<%= form_for @kitten do |f| %>
   <% if flash[:notice]  %>
     <p class = "notice"><%= flash[:notice] %></p>
   <% end %>
